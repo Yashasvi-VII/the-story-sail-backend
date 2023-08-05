@@ -19,6 +19,6 @@ app.use("/api/posts", getById);
 app.use("/api/posts", putRoutes);
 app.use("/api/posts", deleteRoutes);
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`server is running on http://localhost:${PORT}`);
 });
